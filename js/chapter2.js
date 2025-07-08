@@ -1,7 +1,7 @@
 const typeText = [
   "From time to time",
   "Every Moment to moment",
-  "This gender keep hurting and treating her like trash",
+  "This gender keeps hurting and treating her like trash",
   "This gender was ... men",
   "So i kidnapped their leader",
   "Lets beat the shit out of him",
