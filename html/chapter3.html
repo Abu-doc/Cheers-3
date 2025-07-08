@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ana's Museum</title>
+  <link rel="stylesheet" href="../css/chapter3.css" />
+</head>
+<body>
+  <audio id="bgMusic" autoplay loop>
+    <source src="../audio/PASTEL GHOST  IRIS.mp3" type="audio/mp3" />
+  </audio>
+
+  <header>
+    <img src="../images/profile.jpg" alt="Ana" class="profile-pic" />
+    <h1 class="title">Ana’s Museum Wall</h1>
+  </header>
+
+  <!-- Carousel Section -->
+  <section class="carousel-container">
+    <div class="carousel" id="carousel">
+      <div class="carousel-slide" onclick="openModal(this)">
+        <img src="../images/ana1.jpg" alt="Ana 1">
+        <p class="caption">“This is Photo which defines Ana. Her Passion, little seductive and the boldness in her eyes to eat u alive”</p>
+      </div>
+      <div class="carousel-slide" onclick="openModal(this)">
+        <img src="../images/ana2.jpg" alt="Ana 2">
+        <p class="caption">“This one you right now seeing is when she went to tracks of F1. Spoiler : She won.”</p>
+      </div>
+      <div class="carousel-slide" onclick="openModal(this)">
+        <img src="../images/ana3.jpg" alt="Ana 3">
+        <p class="caption">“This is when gods cursed the heavenly angel and made her bleed”</p>
+      </div>
+      <div class="carousel-slide" onclick="openModal(this)">
+        <img src="../images/ana4.jpg" alt="Ana 4">
+        <p class="caption">“This was aftermath she turned into devil sipping blood of all the gods”</p>
+      </div>
+      <div class="carousel-slide" onclick="openModal(this)">
+        <img src="../images/ana6.png" alt="Ana 5">
+        <p class="caption">“If she was the devil than i want to be the person with most sins so i can be noticed by her”</p>
+      </div>
+      <div class="carousel-slide" onclick="openModal(this)">
+        <img src="../images/ana5.png" alt="Ana 5">
+        <p class="caption">“And this right here... this is her and the girls. She loves them.”</p>
+      </div>
+    </div>
+
+    <button class="carousel-btn prev" onclick="moveSlide(-1)">←</button>
+    <button class="carousel-btn next" onclick="moveSlide(1)">→</button>
+  </section>
+
+  <div class="centered-btn next-btn">
+    <a href="chapter4.html">➡️ Next Chapter</a>
+  </div>
+
+  <!-- Modal for image zoom -->
+  <div id="modal" class="modal" onclick="closeModal()">
+    <img id="modalImage" src="" alt="Zoomed">
+    <p id="modalCaption"></p>
+  </div>
+
+  <script src="../js/chapter3.js"></script>
+</body>
+</html>

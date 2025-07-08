@@ -1,0 +1,168 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Courier New', monospace;
+  background-color: black;
+  overflow: hidden;
+  color: #00ffee;
+  background: url('../images/chapter2bg.jpg') no-repeat center center fixed;
+  background-size: cover;
+
+
+
+}
+
+.ana-profile {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 10;
+}
+
+.ana-profile img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 2px solid #00ffee;
+  box-shadow: 0 0 10px #00ffee88;
+}
+
+.typewriter-text {
+  position: absolute;
+  top: 30%;
+  left: 5%;
+  right: 5%;
+  font-size: 1.4rem;
+  white-space: pre-wrap;
+  z-index: 5;
+  line-height: 2rem;
+  transition: opacity 0.5s ease;
+  color: #f2eded;
+}
+
+.weapon-choice {
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 5;
+  transition: opacity 0.5s ease;
+}
+
+.weapon-choice button {
+  margin: 0 10px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  background-color: #222;
+  color: #00ffee;
+  border: 1px solid #00ffee88;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+.weapon-choice button.active {
+  background-color: #00ffee;
+  color: black;
+}
+
+.smash-target {
+  position: absolute;
+  bottom: 150px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 5;
+}
+
+.smash-target img {
+  width: 150px;
+  transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+.smash-target.hit img {
+  animation: beatup 0.3s ease;
+  filter: brightness(1.4) saturate(2);
+}
+
+@keyframes beatup {
+  0% { transform: rotate(0deg) scale(1); }
+  25% { transform: rotate(-10deg) scale(0.95); }
+  50% { transform: rotate(10deg) scale(1.05); }
+  75% { transform: rotate(-5deg) scale(1); }
+  100% { transform: rotate(0deg) scale(1); }
+}
+
+#smashBtn {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: red;
+  color: white;
+  border: none;
+  font-size: 1.2rem;
+  padding: 15px 30px;
+  cursor: pointer;
+  z-index: 5;
+  border-radius: 10px;
+  box-shadow: 0 0 20px red;
+}
+
+#hitCount {
+  position: absolute;
+  bottom: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 1.2rem;
+  z-index: 5;
+}
+
+#after10 {
+  position: absolute;
+  bottom: 140px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 1.2rem;
+  color: #ff0066;
+  font-weight: bold;
+  z-index: 5;
+}
+
+/* Emoji Reaction */
+.hit-reaction {
+  position: absolute;
+  font-size: 2.5rem;
+  z-index: 20;
+  display: none;
+  pointer-events: none;
+  animation: pop 0.6s ease forwards;
+}
+
+@keyframes pop {
+  0% { transform: scale(1); opacity: 1; }
+  100% { transform: scale(1.8); opacity: 0; }
+}
+
+#nextChapter {
+  position: absolute;
+  bottom: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+}
+
+#nextChapter button {
+  padding: 12px 24px;
+  font-size: 1rem;
+  background: rgb(200, 108, 200);
+  color: black;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 0 12px #00ffeeaa;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+#nextChapter button:hover {
+  background: #0ff;
+}
+

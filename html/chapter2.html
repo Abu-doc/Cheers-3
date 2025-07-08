@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Chapter 2 - Rage Mode</title>
+  <link rel="stylesheet" href="../css/chapter2.css" />
+</head>
+<body>
+
+  <!-- Ana's Profile -->
+  <div class="ana-profile">
+    <img src="../images/profile.jpg" alt="Ana" />
+  </div>
+
+  <!-- Typewriter Intro -->
+  <div class="typewriter-text" id="typewriter"></div>
+
+  <!-- Weapon Choice -->
+  <div class="weapon-choice" id="weaponChoice" style="display: none;">
+    <button onclick="setWeapon('fist')">👊 Fist</button>
+    <button onclick="setWeapon('hammer')">🔨 Hammer</button>
+    <button onclick="setWeapon('paw')">🐾 Paw</button>
+  </div>
+
+  <!-- Dummy to Smash -->
+  <div class="smash-target" id="smashTarget" style="display: none;">
+    <img src="../images/dummy-guy.png" alt="The Guy" id="targetFace" />
+  </div>
+
+  <!-- Smash Reaction Emoji -->
+  <div class="hit-reaction" id="hitReaction">💥</div>
+
+  <!-- Smash Button -->
+  <button id="smashBtn" onclick="smashHim()" style="display: none;">SMASH HIM</button>
+
+  <!-- Hit Counter -->
+  <div id="hitCount" style="display: none;">Hits: 0</div>
+
+  <!-- After 10 Hits -->
+  <div id="after10" style="display: none;">Feeling better?</div>
+
+  <div id="nextChapter" style="display: none;">
+  <button onclick="goToNext()">Lets Visit To Ana's Gallery</button>
+</div>
+
+
+  <!-- Background Music -->
+  <audio id="bgMusic" src="../audio/intense-bg.mp3" autoplay loop></audio>
+
+  <script src="../js/chapter2.js"></script>
+</body>
+</html>

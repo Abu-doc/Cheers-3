@@ -1,0 +1,133 @@
+/* GENERAL BODY & BACKGROUND */
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #ffdde1, #ee9ca7, #ffffff);
+  font-family: 'Georgia', serif;
+  overflow: hidden;
+  position: relative;
+}
+
+/* PROFILE TOP RIGHT */
+header {
+  display: flex;
+  justify-content: flex-end;
+  padding: 15px 30px;
+}
+
+.profile-pic {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 2px solid #ffb6c1;
+  box-shadow: 0 0 10px #ff69b4;
+}
+
+/* MESSAGE ICON CENTER */
+.message-icon {
+  font-size: 3rem;
+  text-align: center;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+  animation: shake 1.5s infinite;
+  z-index: 10;
+}
+
+.message-icon p {
+  font-size: 1.2rem;
+  color: #d6336c;
+  font-weight: bold;
+  margin-top: 5px;
+}
+
+@keyframes shake {
+  0%, 100% { transform: translate(-50%, -50%) rotate(0deg); }
+  25% { transform: translate(-50%, -50%) rotate(-4deg); }
+  75% { transform: translate(-50%, -50%) rotate(4deg); }
+}
+
+/* NOTE CONTAINER */
+.note-container {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 80%;
+  max-width: 600px;
+  transform: translate(-50%, -50%);
+  z-index: 20;
+}
+
+.note-container .paper {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* NOTE TEXT */
+.note-text {
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  right: 10%;
+  bottom: 10%;
+  font-size: 1.1rem;
+  font-style: italic;
+  color: #4b1e1e;
+  font-family: 'Georgia', serif;
+  overflow-y: auto;
+}
+
+/* FALLING EMOJIS */
+.emoji-container span {
+  position: absolute;
+  font-size: 1.5rem;
+  animation: fall linear infinite;
+  pointer-events: none;
+}
+
+@keyframes fall {
+  0% { transform: translateY(-10%); opacity: 1; }
+  100% { transform: translateY(120vh); opacity: 0; }
+}
+
+/* LOGOUT POWER BUTTON */
+.logout-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #ff85b3;
+  border-radius: 50%;
+  padding: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background 0.3s ease, transform 0.2s;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.3);
+  text-decoration: none;
+  z-index: 999;
+  color: #fff;
+  font-size: 1.8rem;
+}
+
+.logout-btn:hover {
+  background-color: #f94e87;
+  transform: scale(1.1);
+}
+
+.logout-btn:hover::after {
+  content: 'Log Out';
+  position: absolute;
+  bottom: 120%;
+  right: 0;
+  background: #fff;
+  color: #333;
+  padding: 5px 10px;
+  border-radius: 8px;
+  font-size: 0.8rem;
+  white-space: nowrap;
+  box-shadow: 0 0 5px rgba(0,0,0,0.3);
+}

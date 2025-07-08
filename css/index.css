@@ -1,0 +1,130 @@
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #fceabb, #f8b500);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* Greeting Text */
+.greeting {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333;
+  animation: fadeOut 3s ease forwards;
+  margin-bottom: 30px;
+}
+
+@keyframes fadeOut {
+  0% { opacity: 1; }
+  90% { opacity: 1; }
+  100% { opacity: 0; visibility: hidden; }
+}
+
+/* Glass Login Box */
+.login-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  padding: 40px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  backdrop-filter: blur(15px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* Profile Wrapper with Cat Ears */
+.profile-wrapper {
+  position: relative;
+}
+
+.profile-pic {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid white;
+  transition: transform 0.3s ease;
+}
+
+.profile-wrapper:hover .profile-pic {
+  transform: scale(1.05);
+}
+
+/* Cat Ears */
+.profile-wrapper::before,
+.profile-wrapper::after {
+  content: '';
+  position: absolute;
+  top: -10px;
+  width: 25px;
+  height: 25px;
+  background: #fff;
+  transform: rotate(45deg);
+  border-radius: 5px;
+}
+
+.profile-wrapper::before {
+  left: -10px;
+}
+
+.profile-wrapper::after {
+  right: -10px;
+}
+
+/* Input + Button */
+input[type="password"] {
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  width: 200px;
+  text-align: center;
+  font-size: 1rem;
+  outline: none;
+}
+
+button {
+  padding: 10px 20px;
+  border: none;
+  background: #ff8c00;
+  color: white;
+  font-weight: bold;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 10px #ff8c00;
+}
+
+.error-msg {
+  color: red;
+  font-size: 0.9rem;
+  height: 20px;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .login-box {
+    padding: 25px;
+    width: 80%;
+  }
+
+  input[type="password"] {
+    width: 100%;
+  }
+
+  .greeting {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+}
